@@ -1,0 +1,16 @@
+[Unit]
+Description=Consume RAM Service
+After=network.target
+
+[Service]
+ExecStart=/opt/consume_ram.sh
+User=ramconsumer
+Group=ramconsumer
+Restart=always
+Environment=LC_ALL=C
+StandardOutput=journal
+StandardError=journal
+
+[Install]
+WantedBy=multi-user.target
+

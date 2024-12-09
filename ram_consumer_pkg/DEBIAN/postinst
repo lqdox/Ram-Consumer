@@ -1,0 +1,12 @@
+#!/bin/bash
+
+if ! id "ramconsumer" &>/dev/null; then
+    useradd -r -s /bin/false ramconsumer
+fi
+
+chown ramconsumer:ramconsumer /opt/consume_ram.sh
+
+systemctl daemon-reload
+systemctl enable consume_ram.service
+systemctl start consume_ram.service
+

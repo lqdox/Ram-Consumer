@@ -1,0 +1,9 @@
+Package: ram-consumer
+Version: 1.0
+Section: utils
+Priority: optional
+Architecture: all
+Maintainer: Your Name <youremail@example.com>
+Description: A RAM-consuming service for testing purposes.
+ This package installs a service that consumes RAM progressively.
+
